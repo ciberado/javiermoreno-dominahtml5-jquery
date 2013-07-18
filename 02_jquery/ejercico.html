@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<!--
+html>(head>meta[charset="utf-8"]+
+title{jquery 01: selectores})+body
+-->
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>jquery 02: ejercicio</title>
+	</head>
+	<body>
+
+		<h1>Selectores</h1>
+		<p>Lorem ipsum dolor <strong>sit</strong> amet, consectetur adipiscing elit. Curabitur volutpat quam eget orci sagittis tristique. Etiam fringilla, odio eu ornare pretium, libero sem feugiat augue, vitae commodo diam velit at diam. Aenean posuere arcu a ipsum varius, a congue tortor euismod. Donec mollis.</p>
+		
+		<script src="http://code.jquery.com/jquery-1.10.2.js">
+		</script>
+		<script>
+			function generarMenu(opciones) {
+				var $ul = $('<ul/>');
+				for (var idx=0; idx<opciones.length; idx++) {
+					var $li = $('<li/>');
+					$li.text(opciones[idx]);
+					$li.appendTo($ul);
+				}
+				$('h1').before($ul);
+				//o bien: $ul.prependTo('body');			
+			}		
+				
+			
+			generarMenu(['Lunes', 'Martes', 'Miércoles']);
+			
+		</script>
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+html>(head>title{Demo Javascript 01})+body>h1{x}
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Demo Javascript 01</title>
+	</head>
+	<body>
+		<h1>x</h1>
+		<script>
+			
+			var getSueldoImpl = function () {
+				console.log('Calculando sueldo.');
+				
+				return this.sueldoBase * 1.4;
+			}
+			
+			var per1 = {
+				nombre : 'Alice',
+				sueldoBase : 100000.0,
+				getSueldo : getSueldoImpl
+			};
+			
+			var per2 =  {
+				nombre : 'Bob',
+				sueldoBase : 35000.0,
+				getSueldo : getSueldoImpl
+			};
+			
+			console.log('PERSONA 1: ' + per1.nombre);
+			console.log('PERSONA 2: ' + per2['nombre']);
+			console.log('Sueldo 1: ' + per1.getSueldo());
+			console.log('Sueldo 2: ' + per2.getSueldo());
+			console.log('Ojoooooo! ' + window.getSueldoImpl());
+		</script>
+		
+	</body>
+</html>
+
+
+

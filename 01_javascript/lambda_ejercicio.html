@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+html>(head>title{Demo Javascript 01})+body>h1{x}
+-->
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title>6: Lambda Expressions</title>
+	</head>
+	<body>
+		<h1>6: Lambda Expressions</h1>
+		<script>		
+			
+			function sumar(a, b) {
+				return a + b;
+			}
+			
+			function restar(c, d) {
+				return c - d;
+			}
+			
+			function media(datos) {
+				var resultado = 0;
+				for (var i=0; i < datos.length; i++) {
+					resultado = resultado + datos[i];
+				}
+				return resultado / datos.length;
+			}
+
+			function ejecutarCadenaCalculo(a, b, ops, reducir) {
+				var resultadosParciales = [];
+				for (var i=0; i < ops.length; i++) {
+					var opActual = ops[i];
+					var resultadoParcial = opActual(a,b);
+					resultadosParciales.push(resultadoParcial);
+				}
+				var resultadoFinal = reducir(resultadosParciales);
+				
+				return resultadoFinal;
+			}			
+
+			var output = 
+				ejecutarCadenaCalculo(1, 3, [sumar, sumar], media);
+			console.log(output);
+		
+		</script>
+		
+	</body>
+</html>
+
+
+
+
+
+

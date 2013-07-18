@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+html>(head>title{Demo Javascript 01})+body>h1{x}
+-->
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title>Demo Javascript 01</title>
+	</head>
+	<body>
+		<h1>x</h1>
+		<script>	
+			function saludar(opts) {
+				opts.mensaje = opts.mensaje || 'Hola';
+				opts.repeticiones = opts.repeticiones || 1;
+				opts.nivel = opts.nivel || 'log';
+				opts.mayusculas = opts.mayusculas || false;
+				
+				var output;
+				if (opts.nombre == undefined) {
+					output = opts.mensaje;
+				} else {
+					output = opts.nombre + ': ' + opts.mensaje;
+				}
+				if (opts.mayusculas == true) {
+					output = output.toUpperCase();
+				}
+				for (var i=0; i < opts.repeticiones; i++) {
+					console[opts.nivel](output);
+				}
+			
+			}
+
+			saludar({
+				nombre : 'Alice', 
+				mensaje: 'ey ey ey!',
+				repeticiones : 3,
+				nivel : 'warn',
+				mayusculas : true
+			});
+		
+		</script>
+		
+	</body>
+</html>
+
+
+

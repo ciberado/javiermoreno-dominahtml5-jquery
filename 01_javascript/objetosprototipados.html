@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+html>(head>title{Demo Javascript 01})+body>h1{x}
+-->
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title>8: Objetos prototipados</title>
+	</head>
+	<body>
+		<h1>8: Objetos prototipados</h1>
+		
+
+		<script>		
+
+			function Empleado(nombre, sueldoBase) {
+				this.nombre = nombre;
+				this.sueldoBase = sueldoBase;
+			}
+			
+			Empleado.prototype.x = 1;
+			Empleado.prototype.nombre = null;
+			Empleado.prototype.sueldoBase = 0;
+			Empleado.prototype.getSueldo = function() {
+				return this.sueldoBase * 1.4;
+			}
+			
+			var per1 = new Empleado('Alice', 100000);
+			console.log(per1.x);
+			console.log(per1.getSueldo());
+			
+			var per2 = new Empleado('Bob', 35000);
+			console.log(per2.getSueldo());
+			
+			
+			
+		</script>
+		
+	</body>
+</html>
+
+
+
+
+
+

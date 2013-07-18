@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+html>(head>title{Demo Javascript 01})+body>h1{x}
+-->
+<html>
+	<head> 
+		<meta charset="utf-8">
+		<title>7: Closures</title>
+	</head>
+	<body>
+		<h1>7: Closures</h1>
+		<script>		
+
+			function alpha(par1) {			
+				var loc1 = par1 * 2;
+				
+				var beta = function (par2) {
+					var loc2 = par2 * par1;
+					loc2 = loc2 + loc1;
+					
+					return loc2;
+				}
+				
+				var r = beta(loc1);
+				console.log('Ejecución alpha con par1= ' + par1 
+				           +' y r= ' + r + '.');
+				return beta;
+			}
+			
+			var b1 = alpha(1);
+			var b2 = alpha(2);
+			
+			var rb1 = b1(100);
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>
+
+
+
+
+
+

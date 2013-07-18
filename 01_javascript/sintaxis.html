@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+html>(head>title{Demo Javascript 01})+body>h1{x}
+-->
+<html>
+	<head>
+		<title>Demo Javascript 01</title>
+	</head>
+	<body>
+		<h1>x</h1>
+		<!--
+		ol>li{Item $}*5
+		<ol>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+		</ol>
+		-->
+		<script>
+			
+			var test = function() {
+				/*var*/ nombre = 'Alice';
+				console.log(nombre);
+			}
+		
+			var alias = test;
+			console.log('[1]');
+			test();
+			console.log('[2]');
+			alias();
+			console.log('[3]');
+			
+			console.log(window.nombre);
+			
+		</script>
+		
+	</body>
+</html>
+
+
+

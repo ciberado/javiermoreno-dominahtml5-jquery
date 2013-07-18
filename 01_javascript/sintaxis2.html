@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+html>(head>title{Demo Javascript 01})+body>h1{x}
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Demo Javascript 01</title>
+	</head>
+	<body>
+		<h1>x</h1>
+		<script>
+			
+			
+		var saludar = function(nombreORepeticiones, mensaje) {				
+			mensaje = mensaje || 'Hola';
+			if (typeof(nombreORepeticiones) == 'string') {
+				_saludarPersona(nombreORepeticiones, mensaje);
+			} else {
+				_saludarRepeticiones(nombreORepeticiones, mensaje);
+			}
+		}
+		
+		function _saludarPersona(nombre, mensaje) {
+			console.log(nombre+ ': ' + mensaje);
+		}
+		
+		function _saludarRepeticiones(repeticiones, mensaje) {
+			for (var i=0; i < repeticiones; i++) {
+				console.log(mensaje);
+			}
+		}
+			
+
+			// Invocación normal:
+			// saludar('Alice', 'Bon dia');
+			
+			// Invocación omitiendo parámetros
+			//saludar('Alice');
+			
+			// Invocación parámetros tipo variable:
+			saludar('Bob');
+			saludar(3, 'Ey!!!');
+			saludar(5);
+			
+			var x = 1;
+			var _x = 2;
+			var _ = 3;
+			var $x = 4;
+			var $ = 5;
+			var $ = function() { alert('**'); }
+			$();
+			
+		</script>
+		
+	</body>
+</html>
+
+
+
